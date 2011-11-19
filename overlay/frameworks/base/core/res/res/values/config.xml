@@ -25,7 +25,9 @@
     <bool name="config_automatic_brightness_available">true</bool>
 
     <!-- Our amoled doesn't animate well. -->
+    <!--
     <bool name="config_animateScreenLights">false</bool>
+    -->
 
     <!-- disable menu hard key on Passion in non-pattern lockscreen -->
     <bool name="config_disableMenuKeyInLockScreen">true</bool>
@@ -89,6 +91,7 @@
     <!--
     <string name="default_wallpaper_component">com.android.wallpaper/.nexus.NexusWallpaper</string>
     -->
+
     <!--
     <string name="default_wallpaper_component">com.android.phasebeam/.PhaseBeamWallpaper</string>
     -->
