@@ -49,7 +49,6 @@ PRODUCT_PACKAGES := \
     sensors.mahimahi \
     lights.mahimahi \
     librs_jni \
-    gralloc.qsd8k \
     copybit.qsd8k \
     gps.mahimahi \
     libOmxCore \
@@ -57,6 +56,7 @@ PRODUCT_PACKAGES := \
     com.android.future.usb.accessory \
     audio.primary.qsd8k \
     audio_policy.qsd8k
+#    gralloc.qsd8k
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
