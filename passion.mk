@@ -20,7 +20,7 @@ PRODUCT_PROPERTY_OVERRIDES :=
 DEVICE_PACKAGE_OVERLAYS := device/htc/passion-common/overlay
 
   # Turn on checkjni for non-user builds.
-  #ADDITIONAL_BUILD_PROPERTIES += ro.kernel.android.checkjni=1
+  ADDITIONAL_BUILD_PROPERTIES += ro.kernel.android.checkjni=1
   # Set device insecure for non-user builds.
   ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
   # Allow mock locations by default for non user builds
@@ -54,7 +54,9 @@ PRODUCT_PACKAGES := \
     gps.mahimahi \
     libOmxCore \
     libOmxVidEnc \
-    com.android.future.usb.accessory
+    com.android.future.usb.accessory \
+    audio.primary.qsd8k \
+    audio_policy.qsd8k
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
