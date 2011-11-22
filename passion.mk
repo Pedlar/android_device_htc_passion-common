@@ -19,12 +19,21 @@ PRODUCT_PROPERTY_OVERRIDES :=
 
 DEVICE_PACKAGE_OVERLAYS := device/htc/passion-common/overlay
 
-  # Turn on checkjni for non-user builds.
-  ADDITIONAL_BUILD_PROPERTIES += ro.kernel.android.checkjni=1
-  # Set device insecure for non-user builds.
-  ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
-  # Allow mock locations by default for non user builds
-  ADDITIONAL_DEFAULT_PROPERTIES += ro.allow.mock.location=1
+#  # Turn on checkjni for non-user builds.
+ADDITIONAL_BUILD_PROPERTIES += ro.kernel.android.checkjni=1
+#  # Set device insecure for non-user builds.
+ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
+#  # Allow mock locations by default for non user builds
+ADDITIONAL_DEFAULT_PROPERTIES += ro.allow.mock.location=1
+
+# Market Fix
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=passion BUILD_ID=GRK39F BUILD_FINGERPRINT=google/passion/passion:2.3.6/GRK39F/189904:user/release-keys PRIVATE_BUILD_DESC="passion-user 2.3.6 GRK39F 189904 release-keys"
+
+# Extra RIL settings
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ril.enable.managed.roaming=1 \
+    ro.ril.oem.nosim.ecclist=911,112,999,000,08,118,120,122,110,119,995 \
+    ro.ril.emc.mode=2
 
 PRODUCT_COPY_FILES := \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -43,7 +52,7 @@ PRODUCT_COPY_FILES += \
     device/htc/passion-common/media_profiles.xml:system/etc/media_profiles.xml
 
 # Get the long list of APNs
-PRODUCT_COPY_FILES += device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
+#PRODUCT_COPY_FILES += device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 
 PRODUCT_PACKAGES := \
     sensors.mahimahi \
@@ -54,9 +63,10 @@ PRODUCT_PACKAGES := \
     libOmxCore \
     libOmxVidEnc \
     com.android.future.usb.accessory \
+    audio.a2dp.default \
     audio.primary.qsd8k \
-    audio_policy.qsd8k
-#    gralloc.qsd8k
+    audio_policy.qsd8k \
+    gralloc.qsd8k
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
@@ -90,4 +100,7 @@ $(call inherit-product, device/htc/passion-common/media_a1026.mk)
 
 # stuff common to all HTC phones
 $(call inherit-product, device/htc/common/common.mk)
+
+# Include GSM stuff
+$(call inherit-product, device/htc/passion-common/cm/gsm.mk)
 
