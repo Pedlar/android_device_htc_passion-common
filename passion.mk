@@ -52,7 +52,7 @@ PRODUCT_COPY_FILES += \
     device/htc/passion-common/media_profiles.xml:system/etc/media_profiles.xml
 
 # Get the long list of APNs
-#PRODUCT_COPY_FILES += device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
+PRODUCT_COPY_FILES += device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 
 PRODUCT_PACKAGES := \
     sensors.mahimahi \
@@ -102,5 +102,5 @@ $(call inherit-product, device/htc/passion-common/media_a1026.mk)
 $(call inherit-product, device/htc/common/common.mk)
 
 # Include GSM stuff
-$(call inherit-product, device/htc/passion-common/cm/gsm.mk)
+#$(call inherit-product, device/htc/passion-common/cm/gsm.mk)
 
