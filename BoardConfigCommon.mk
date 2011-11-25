@@ -55,7 +55,7 @@ BOARD_VENDOR_QCOM_AMSS_VERSION := 3200
 
 BOARD_VENDOR_USE_AKMD := akm8973
 
-#BOARD_EGL_CFG := device/htc/passion-common/egl.cfg
+BOARD_EGL_CFG := device/htc/passion-common/egl.cfg
 
 BOARD_USES_QCOM_LIBS := true
 
