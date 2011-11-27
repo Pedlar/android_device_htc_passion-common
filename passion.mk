@@ -58,7 +58,6 @@ PRODUCT_PACKAGES := \
     sensors.mahimahi \
     lights.mahimahi \
     librs_jni \
-    copybit.qsd8k \
     gps.mahimahi \
     libOmxCore \
     libOmxVidEnc \
@@ -67,7 +66,9 @@ PRODUCT_PACKAGES := \
     audio.primary.qsd8k \
     audio_policy.qsd8k \
     gralloc.qsd8k \
-    hwcomposer.default
+    hwcomposer.default \
+    Stk
+#    copybit.qsd8k \
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
