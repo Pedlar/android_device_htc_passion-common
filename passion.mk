@@ -32,7 +32,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.sys.strictmode.visual=0
 # Market Fix
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=passion BUILD_ID=GRK39F BUILD_FINGERPRINT=google/passion/passion:2.3.6/GRK39F/189904:user/release-keys PRIVATE_BUILD_DESC="passion-user 2.3.6 GRK39F 189904 release-keys"
 
-# Extra RIL settings
+# Extra RIL settings from CM7
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.enable.managed.roaming=1 \
     ro.ril.oem.nosim.ecclist=911,112,999,000,08,118,120,122,110,119,995 \
@@ -71,7 +71,6 @@ PRODUCT_PACKAGES := \
     audio_policy.qsd8k \
     gralloc.qsd8k \
     hwcomposer.default \
-    Stk
 #    copybit.qsd8k \
 
 # we have enough storage space to hold precise GC data
