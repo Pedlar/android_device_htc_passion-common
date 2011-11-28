@@ -14,23 +14,23 @@
 # limitations under the License.
 #
 
-PRODUCT_PROPERTY_OVERRIDES :=
-    ro.media.dec.jpeg.memcap=20000000
-
 DEVICE_PACKAGE_OVERLAYS := device/htc/passion-common/overlay
 
 #Get ENG stuff on our userdebug builds
 # Turn on checkjni for non-user builds.
-ADDITIONAL_BUILD_PROPERTIES += ro.kernel.android.checkjni=1
+ADDITIONAL_BUILD_PROPERTIES_OVERIDES += ro.kernel.android.checkjni=1
 # Set device insecure for non-user builds.
-ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
+ADDITIONAL_DEFAULT_PROPERTIES_OVERIDES += ro.secure=0
 # Allow mock locations by default for non user builds
-ADDITIONAL_DEFAULT_PROPERTIES += ro.allow.mock.location=1
+ADDITIONAL_DEFAULT_PROPERTIES_OVERRIDES += ro.allow.mock.location=1
 # Disable visual strict mode, even on eng builds
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.sys.strictmode.visual=0
 
 # Market Fix
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=passion BUILD_ID=GRK39F BUILD_FINGERPRINT=google/passion/passion:2.3.6/GRK39F/189904:user/release-keys PRIVATE_BUILD_DESC="passion-user 2.3.6 GRK39F 189904 release-keys"
+
+PRODUCT_PROPERTY_OVERRIDES :=
+    ro.media.dec.jpeg.memcap=20000000
 
 # Extra RIL settings from CM7
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -40,7 +40,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 #Mod version
 PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=Prerelease-Alpha-CyanogenMod-9-$(shell date +%m%d%Y)-drewis-N1-KANG
+        ro.modversion=Prerelease-CyanogenMod-9-$(shell date +%m%d%Y)-drewis-N1-KANG
 
 PRODUCT_COPY_FILES := \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -71,6 +71,7 @@ PRODUCT_PACKAGES := \
     audio_policy.qsd8k \
     gralloc.qsd8k \
     hwcomposer.default \
+    Superuser \
 #    copybit.qsd8k \
 
 # we have enough storage space to hold precise GC data
