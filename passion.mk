@@ -47,8 +47,9 @@ PRODUCT_PACKAGES := \
     audio.primary.qsd8k \
     audio_policy.qsd8k \
     gralloc.qsd8k \
-    hwcomposer.default \
-    copybit.qsd8k
+    hwcomposer.qsd8k \
+    copybit.qsd8k \
+    #liboverlay #not sure about this yet
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
