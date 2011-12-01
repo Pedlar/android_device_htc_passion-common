@@ -49,6 +49,9 @@ PRODUCT_PACKAGES := \
     gralloc.qsd8k \
     hwcomposer.qsd8k \
     copybit.qsd8k \
+    hwcomposer.default \
+    libgenlock \
+    liboverlay \
     #liboverlay #not sure about this yet
 
 # we have enough storage space to hold precise GC data
@@ -63,9 +66,9 @@ PRODUCT_COPY_FILES += \
     device/htc/passion-common/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc \
     device/htc/passion-common/vold.fstab:system/etc/vold.fstab
 
-#Wifi module
 PRODUCT_COPY_FILES += \
-    device/htc/passion-common/bcm4329.ko:system/lib/modules/bcm4329.ko
+    device/htc/passion-common/bcm4329.ko:system/lib/modules/bcm4329.ko \
+    device/htc/passion-common/fuse.ko:system/lib/modules/fuse.ko
 
 #Prebuilt Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
