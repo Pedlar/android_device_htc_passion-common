@@ -19,6 +19,10 @@
 <resources>
     <bool name="def_accelerometer_rotation">true</bool>
     <bool name="def_screen_brightness_automatic_mode">true</bool>
-    <!-- Screen timeout default = 30 seconds -->
-    <integer name="def_screen_off_timeout">30000</integer>
+    <integer name="def_screen_off_timeout">45000</integer>
+    <integer name="def_lockscreen_sounds_enabled">1</integer>
+    <!-- Default for Settings.System.POINTER_SPEED -->
+    <integer name="def_pointer_speed">100</integer>
+    <!-- Default for UI touch sounds enabled -->
+    <bool name="def_sound_effects_enabled">true</bool>
 </resources>
