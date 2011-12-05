@@ -78,6 +78,11 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_HAVE_FM_RADIO := true
 BOARD_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
 
+# GPS HAL
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := mahimahi
+# AMSS version to use for GPS
+BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 3200
+
 # # cat /proc/mtd #AOSP                 # # cat /proc/mtd #CM7
 # dev:    size   erasesize  name        # dev:    size   erasesize  name
 # mtd0: 000e0000 00020000 "misc"        # mtd0: 000e0000 00020000 "misc"
