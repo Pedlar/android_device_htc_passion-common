@@ -55,15 +55,15 @@ BOARD_USE_KINETO_COMPATIBILITY := true
 BOARD_VENDOR_QCOM_AMSS_VERSION := 3200
 BOARD_VENDOR_USE_AKMD := akm8973
 
-# Hardware rendering
-# doesn't actually work until we have hwcomposer
-USE_OPENGL_RENDERER := true
-BOARD_EGL_CFG := device/htc/passion-common/egl.cfg
+## Hardware rendering
+## doesn't actually work until we have hwcomposer
+#USE_OPENGL_RENDERER := true
+#BOARD_EGL_CFG := device/htc/passion-common/egl.cfg
 
-# Temp stuff for HWA hack
-BOARD_NO_RGBX_8888 := true
-BOARD_USES_OVERLAY := true
-COMMON_GLOBAL_CFLAGS += -DBOARD_GL_OES_EGL_IMG_EXTERNAL_HACK
+## Temp stuff for HWA hack
+#BOARD_NO_RGBX_8888 := true
+#BOARD_USES_OVERLAY := true
+#COMMON_GLOBAL_CFLAGS += -DBOARD_GL_OES_EGL_IMG_EXTERNAL_HACK
 
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QCOM_LIBS := true
@@ -77,12 +77,6 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 # FM
 BOARD_HAVE_FM_RADIO := true
 BOARD_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
-
-# GPS HAL
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := mahimahi
-
-# AMSS version to use for GPS
-BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 3200
 
 # # cat /proc/mtd #AOSP                 # # cat /proc/mtd #CM7
 # dev:    size   erasesize  name        # dev:    size   erasesize  name

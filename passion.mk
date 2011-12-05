@@ -50,8 +50,8 @@ PRODUCT_PACKAGES := \
     copybit.qsd8k \
     hwcomposer.qsd8k \
     hwcomposer.default \
-    libgenlock \
-    liboverlay
+#    libgenlock \
+#    liboverlay 
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
