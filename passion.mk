@@ -48,10 +48,9 @@ PRODUCT_PACKAGES := \
     audio_policy.qsd8k \
     gralloc.qsd8k \
     copybit.qsd8k \
-    hwcomposer.qsd8k \
     hwcomposer.default \
-#    libgenlock \
-#    liboverlay 
+    hwcomposer.qsd8k
+
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
