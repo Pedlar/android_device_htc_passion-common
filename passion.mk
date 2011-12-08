@@ -16,9 +16,7 @@
 
 DEVICE_PACKAGE_OVERLAYS := device/htc/passion-common/overlay
 
-PRODUCT_PROPERTY_OVERRIDES :=
-    ro.media.dec.jpeg.memcap=20000000
-
+# Permissions
 PRODUCT_COPY_FILES := \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     frameworks/base/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -35,18 +33,19 @@ PRODUCT_COPY_FILES := \
 PRODUCT_COPY_FILES += \
     device/htc/passion-common/media_profiles.xml:system/etc/media_profiles.xml
 
+# Packages needed for passion
 PRODUCT_PACKAGES := \
-    sensors.mahimahi \
-    lights.mahimahi \
     librs_jni \
     libOmxCore \
     libOmxVidEnc \
     libgenlock \
     com.android.future.usb.accessory \
+    sensors.mahimahi \
+    lights.mahimahi \
     gps.mahimahi \
     audio.a2dp.default \
-    audio.primary.qsd8k \
-    audio_policy.qsd8k \
+    audio.primary.mahimahi \
+    audio_policy.mahimahi \
     gralloc.mahimahi \
     copybit.mahimahi \
     hwcomposer.default \
@@ -59,12 +58,14 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 # Passion uses high-density artwork where available
 PRODUCT_LOCALES := hdpi
 
+# put something here
 PRODUCT_COPY_FILES += \
     device/htc/passion-common/mahimahi-keypad.kl:system/usr/keylayout/mahimahi-keypad.kl \
     device/htc/passion-common/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
     device/htc/passion-common/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc \
     device/htc/passion-common/vold.fstab:system/etc/vold.fstab
 
+#Modules
 PRODUCT_COPY_FILES += \
     device/htc/passion-common/bcm4329.ko:system/lib/modules/bcm4329.ko \
     device/htc/passion-common/fuse.ko:system/lib/modules/fuse.ko
@@ -75,10 +76,10 @@ LOCAL_KERNEL := device/htc/passion-common/kernel
 else
 LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
+# Proprietary makefile
 $(call inherit-product-if-exists, vendor/htc/passion-common/passion-vendor.mk)
 
 # media profiles and capabilities spec
