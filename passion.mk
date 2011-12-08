@@ -39,17 +39,18 @@ PRODUCT_PACKAGES := \
     sensors.mahimahi \
     lights.mahimahi \
     librs_jni \
-    gps.mahimahi \
     libOmxCore \
     libOmxVidEnc \
+    libgenlock \
     com.android.future.usb.accessory \
+    gps.mahimahi \
     audio.a2dp.default \
     audio.primary.qsd8k \
     audio_policy.qsd8k \
-    gralloc.qsd8k \
-    copybit.qsd8k \
+    gralloc.mahimahi \
+    copybit.mahimahi \
     hwcomposer.default \
-    hwcomposer.qsd8k
+    hwcomposer.mahimahi
 
 
 # we have enough storage space to hold precise GC data
