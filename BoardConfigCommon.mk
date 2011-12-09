@@ -75,13 +75,15 @@ BOARD_VENDOR_USE_AKMD := akm8973
 ## doesn't actually work until we have hwcomposer
 USE_OPENGL_RENDERER := true
 BOARD_EGL_CFG := device/htc/passion-common/egl.cfg
-#for rmcc egl hack
-COMMON_GLOBAL_CFLAGS += \
-    -DMISSING_EGL_EXTERNAL_IMAGE \
-    -DMISSING_EGL_PIXEL_FORMAT_YV12 \
-    -DFORCE_EGL_CONFIG=0x9 \
-    -DMISSING_GRALLOC_BUFFERS
-## Temp stuff for hashcode HWA hack
+##for rmcc egl hack
+#COMMON_GLOBAL_CFLAGS += \
+#    -DMISSING_EGL_EXTERNAL_IMAGE \
+#    -DMISSING_EGL_PIXEL_FORMAT_YV12 \
+#    -DFORCE_EGL_CONFIG=0x9 \
+#    -DMISSING_GRALLOC_BUFFERS
+##for hashcode egl hack
+#BOARD_NO_RGBX_8888 := true
+#BOARD_USES_OVERLAY := true
 #COMMON_GLOBAL_CFLAGS += -DBOARD_GL_OES_EGL_IMG_EXTERNAL_HACK
 
 BOARD_USES_QCOM_HARDWARE := true
