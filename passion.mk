@@ -46,10 +46,10 @@ PRODUCT_PACKAGES := \
     audio.a2dp.default \
     audio.primary.mahimahi \
     audio_policy.mahimahi \
-    gralloc.mahimahi \
-    copybit.mahimahi \
-    hwcomposer.default \
-    hwcomposer.mahimahi
+    gralloc.qsd8k \
+    copybit.qsd8k \
+    hwcomposer.qsd8k \
+#    hwcomposer.mahimahi
 
 
 # we have enough storage space to hold precise GC data
